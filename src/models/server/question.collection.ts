@@ -8,6 +8,8 @@ import {databases} from "./config"
 
 
 export default  async function createQuestionCollection(){
+
+    
 // create collection
 await databases.createCollection(db,questionCollection,questionCollection
     ,[
@@ -40,7 +42,7 @@ await Promise.all([
         questionCollection,
         "title",
         IndexType.Fulltext,
-        ["tile"],['asc']
+        ["title"],['asc']
 ),
  databases.createIndex(
         db,

@@ -9,6 +9,7 @@ client
     .setKey(env.appwrite.apikeys) // Your secret API key
 ;
 
+console.log("API Key Loaded:", env.appwrite.apikeys);
 const databases=new Databases(client);
 const avatars=new Avatars(client);
 const storage=new Storage(client);
